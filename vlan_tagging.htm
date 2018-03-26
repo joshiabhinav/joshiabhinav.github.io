@@ -1,0 +1,36 @@
+<html>
+<head></head>
+<body>
+<h1>Vlan concepts:</h1>
+<h2>
+1) VLan tagging
+2) Vlan awareness
+3) Vlan mapping rules
+4) Frame distribution
+</h2>
+<pre>
+A device can be called VLAN aware even if it doesnot add, delete or modifies tags but forwards frames on the basis of
+certain rules.
+In a network edge switch can add tags to untagged frames or forward is as such.
+
+Forwarding is done by two means->
+- Parse the packet and apply VLAN rules
+- Apply VLAN tags to the frame.
+
+VLan Tagging:
+
+Two types
+i) Implicit tagging:
+- Forwarding is done by VLan aware devices on the basis of
+    i) Destination datalink address
+    ii) Protocol ID
+    iii) Higher layer protocol
+    iii) Application specific fields 
+
+ii) Explicit tagging
+
+destination address | source address |vlan protocl ID| Tag control Info(Priority/|CFI=0|vlan identifier|Lenght/type)/~data(46-1500bytes)~/FCS
+
+</pre>
+</body>
+</html>
