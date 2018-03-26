@@ -15,27 +15,34 @@ Obsolete term for packet switch network connected via gateway.
 5) Architecture layering
  </b>
  <h3><b>virtual local area network.</b></h3>
+ <pre>
 ->10Base-T were star topology based local area network which got popular in 1990's, despite no benefit for cost over twisted wire.
 ->They were popular because they were configurable from a centralized location.
 ->VLAN aware switch take this idea to another level, now changing of configuration can be done logically without modifying the physical
     connections.
 ->Without VLAN i.e. under normal lans connected via hubs logical connections are tightly coupled with physical connections.
-
+</pre>
  <h3>Benefits of VLAN:</h3>
  <h4>Software Patch Panel:</h4>
 10BaseT VLAN aware packet switched network can be configured with out any physical connection requirement.Devices can be added, extended ,deleted
 via configuration only.
  <h4>User Mobility:</h4>
+ <pre>
 -User can move to a different location and can still access the same LAN resources.
 -With Mobility source lookup should be done to direct the traffic to the user.
+</pre>
  <h4>Lan Security:</h4>
+ <pre>
 -port based switches provide security to some extent, but it doesnot protect user from from multicast traffic and evesdropping on multicast traffic.
 -VLAN can restrict the access of such malicious users to single group of users even on same switch.
- <h4>Lan Bandwidth control:</h4>
+</pre>
+<h4>Lan Bandwidth control:</h4>
+ <pre>
 -Bandwidth control is achieved as the traffic is not send to all ports but only a subset of LANs
 -Multicast pruning is another way to control the traffic which is easire than VLAN bandwidth control to implement but once VLAN is being implemented this feature is an added benefit ,free of cost.
 -VLAN bandwidth control can also be used along with multicast pruning , where VLAN with protect from multicast across different VLANs , multicast 
 pruning will control bandwidht winthin VLAN.
 -VLAN automatic configuration is provided via GARP VLAN reservation protocol(GVRP) while this is provided by GMRP in case of Multicast pruning.
+</pre>
 </body>
 </html>
