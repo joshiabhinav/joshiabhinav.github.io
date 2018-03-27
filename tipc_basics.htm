@@ -1,0 +1,25 @@
+
+TIPC overview , Motivation and Assumptions
+TIPC (Transparent IPC) was developed by Ericsson and version 2.0 is opensource.
+
+Motivation of developing this protocol was to develop a fast inter-process communication across different nodes of cluster in a network .
+
+This protocol achieves this by handing over packet from layer 2 to application layer directly , hence doesn ot have any overhead of packet going through the normal networking stack.
+
+This protocol works under the assumption that it would be used in a closed environment and hence it assumes the network being secure.
+
+Since it bypasses whole of the network stack, it has its own mechanism of identifying individual nodes of a cluster.This is based on a unique addressing scheme <Z.C.N:port> .Associated with each node is a unique identifier called Network Identifier.
+
+Max Zones: 1 - 255 (8 bit)
+
+Max clusters: 1- 4095 (12 bit)
+
+Max Nodes: 1 - 4095 (12 bit)
+
+TIPC can be connection oriented and connection less depending on the option selected by the programmer.
+
+TIPC is a message based protocol and size of the message ranges from 1-66000 bytes.
+
+There would  be a unique address and network identifier associated with a node, irrespective of the number of interfaces on a node.
+
+​
