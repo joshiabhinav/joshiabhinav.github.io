@@ -1,0 +1,37 @@
+<html>
+<head></head>
+<body>
+<pre>
+IKE(Internet key exchange) is a group of protocol namely.
+1) ISAKMP
+2) SKEME
+3) OAKLEY
+
+ISAKMP: Provides messaging and message formats.
+OAKLEY: Provides key exchange modes for diffie hellman key exchange.
+SKEME: Provides features like key replacement, forward security, repudability,
+
+The overall mechanism of key exchange is borrowed heavily from ISAKMP and like ISAKMP it consists of 2 phases.
+1) Main mode and Aggressive mode
+2) Quick mode.
+
+During phase1 authenticate, establisg secure channel and exchange keys for SA.
+During phase2 Ipsec SA are created and used for data transfer.
+
+Main mode:
+          -------HDR-SA-------->
+          <------HDR-SA---------
+          ----HDR-KEY-NONCE---->
+Initiator <---HDR-KEY-NONCE-----   Responder
+          ----HDR-ID-AUTH------>
+          <---HDR-ID-AUTH-------
+  
+Phase 1 can use any of the following
+1) Shared secret
+2) Digital Signature
+3) Public key authentication
+4) New Public key authentcation
+</pre>
+
+</body>
+</html>
