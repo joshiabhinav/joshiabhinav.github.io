@@ -15,22 +15,30 @@ The overall mechanism of key exchange is borrowed heavily from ISAKMP and like I
 1) Main mode and Aggressive mode
 2) Quick mode.
 
-During phase1 authenticate, establisg secure channel and exchange keys for SA.
+During phase1 it authenticate, establish secure channel and exchange keys for SA.
 During phase2 Ipsec SA are created and used for data transfer.
 
-Main mode:
+Main mode:( 6 messages are exchanged )
           -------HDR-SA-------->
           <------HDR-SA---------
           ----HDR-KEY-NONCE---->
 Initiator <---HDR-KEY-NONCE-----   Responder
           ----HDR-ID-AUTH------>
           <---HDR-ID-AUTH-------
-  
+
+Aggressive mode:( 3 messages are exchanged )
+          -------HDR-SA-key-ID-nonce-------->
+Initiator <------HDR-SA-key-ID-nonce-AUTH---- Responder
+          ---------HDR-ID-AUTH-------------->
+
 Phase 1 can use any of the following
 1) Shared secret
 2) Digital Signature
 3) Public key authentication
 4) New Public key authentcation
+
+
+
 </pre>
 
 </body>
