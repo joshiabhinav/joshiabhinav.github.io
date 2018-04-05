@@ -1,0 +1,27 @@
+<html>
+<head></head>
+<body>
+<pre>
+Memory mapping: Mapping of device memory directly into user process addrs space.
+Direct memory access(DMA) provides device the direct access to memory without cpu intervention.
+
+Addresses:
+<u>Physical address:</u>
+Corresponds to the actual address provided by RAM.
+<u>Bus address:</u>
+Can be same as physical address but in some cases there is an IOMMU involved which translates the scattered address into contiguous address.
+<u>Kernel logical address:</u>
+Same as physical address but is at some offset from the physical address.Kmalloc returns logical address.
+<u>Virtual address:</u>
+Virtual address may or may not be mapped to physical address.eg address returned by vmalloc and kmap.
+All logical address are virtual addresses but all virtual addresses may not be virtual addresses.
+
+_pa() macro is used to convert logical address into physical address
+_va() macro physical address is mapped back to virtual address only for high memory regions.
+
+
+
+
+</pre>
+</body>
+</html>
