@@ -6,20 +6,20 @@ Memory mapping: Mapping of device memory directly into user process addrs space.
 Direct memory access(DMA) provides device the direct access to memory without cpu intervention.
 
 Addresses:
-<u>Physical address:</u>
+> <u>Physical address:</u>
 Corresponds to the actual address provided by RAM.
-<u>Bus address:</u>
+> <u>Bus address:</u>
 Can be same as physical address but in some cases there is an IOMMU involved which translates the scattered address into contiguous address.
-<u>Kernel logical address:</u>
+> <u>Kernel logical address:</u>
 Same as physical address but is at some offset from the physical address.Kmalloc returns logical address.
-<u>Virtual address:</u>
+> <u>Virtual address:</u>
 Virtual address may or may not be mapped to physical address.eg address returned by vmalloc and kmap.
 All logical address are virtual addresses but all virtual addresses may not be virtual addresses.
 
-_pa() macro is used to convert logical address into physical address
-_va() macro physical address is mapped back to virtual address only for high memory regions.
+>> _pa() macro is used to convert logical address into physical address
+>> _va() macro physical address is mapped back to virtual address only for high memory regions.
 
-Physical address and pages:
+<u>Physical address and pages:</u>
 Pages are organized in memory using pages. 12 least significant bits are the offset and rest is the page frame number.
 PAGE_SHIFT macro tells how many bits needs to be shifted to get page fram number from page address.
 
@@ -40,7 +40,7 @@ kmap(), kunmap(),kmap_atomic(), kunmap_atomic().
 
 Page tables are used to manage pages in memory these are tree structured virtual to physical mapping along with some flags associated.
 
-<u>Virtual memory are</u>
+<u>Virtual memory area</u>
 Virtual memory area(( denoted by struct vma) is a kernel data structure used to manage a distinct region inthe process address space.
 VMA represnts homogeneous are in the virtual memory of the process which is contiguos, have same permissions flag and backed by same object.
 eg file, swap space etc.
