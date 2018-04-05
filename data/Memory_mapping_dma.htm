@@ -38,6 +38,14 @@ void* page_address(struct page*): return page virtual address is address exists.
 
 kmap(), kunmap(),kmap_atomic(), kunmap_atomic().
 
+Page tables are used to manage pages in memory these are tree structured virtual to physical mapping along with some flags associated.
+
+<u>Virtual memory are</u>
+Virtual memory area(( denoted by struct vma) is a kernel data structure used to manage a distinct region inthe process address space.
+VMA represnts homogeneous are in the virtual memory of the process which is contiguos, have same permissions flag and backed by same object.
+eg file, swap space etc.
+
+Components of virtual memory area:
 
 
 </pre>
