@@ -19,6 +19,19 @@ All logical address are virtual addresses but all virtual addresses may not be v
 _pa() macro is used to convert logical address into physical address
 _va() macro physical address is mapped back to virtual address only for high memory regions.
 
+Physical address and pages:
+Pages are organized in memory using pages. 12 least significant bits are the offset and rest is the page frame number.
+PAGE_SHIFT macro tells how many bits needs to be shifted to get page fram number from page address.
+
+Struct page:
+Traditionally kernel deals in logical addresses but logical addresses can not be used in high memory, hence kernel uses struct page to manage this.
+struct page{
+  atomic_t count; ///usage count
+  void* virtual; //virtual address of the page if it is mapped 0 otherwise.
+  unsigned int flags; //describing status of the page eg 
+                      //PG_LOCKED: page is locked in memory
+                      //PG_RESERVED: not available for memory management
+}
 
 
 
