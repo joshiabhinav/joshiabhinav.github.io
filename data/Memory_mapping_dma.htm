@@ -32,6 +32,11 @@ struct page{
                       //PG_LOCKED: page is locked in memory
                       //PG_RESERVED: not available for memory management
 }
+Helper functions:
+struct page* pfn_to_page(void*): converts pfn to page.
+void* page_address(struct page*): return page virtual address is address exists.
+
+kmap(), kunmap(),kmap_atomic(), kunmap_atomic().
 
 
 
