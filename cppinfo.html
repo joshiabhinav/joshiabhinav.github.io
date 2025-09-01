@@ -10,8 +10,8 @@ Players involved:<br>
 - unique_ptr<br>
 - make_unique<br>
 Unique pointer can be integrated with legacy code or even code written in C(say some library), once registered the unique_ptr will take care of the deallocation of the resource.This can be <br>
-achieved by implementing a custom destructor which is passed as the second argument the pointer itself, this option is optional for other purposes meaning if there is no need to do say custom<br>
-deletion and rely on deallocator provided by the cpp framework.<br>
+achieved by implementing a custom destructor which is passed as the second argument to the pointer itself, this option is optional, meaning if there is no need to do say custom<br>
+deletion and rely on deallocator provided by the cpp framework, second argument can be ignored.<br>
 </p>
 </body>
 </html>
